@@ -11,7 +11,7 @@ gcc \
   -ffunction-sections \
   -fno-unwind-tables \
   -fno-asynchronous-unwind-tables \
-  -ffixed-r9 \
+  -ffixed-r11 \
   -Wl,-n \
   -Wl,--gc-sections \
   -Wl,--build-id=none \

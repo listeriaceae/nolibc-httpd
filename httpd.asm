@@ -39,7 +39,7 @@ phdrsize      equ     $ - phdr
 
 _start:
         xor     rbp, rbp
-        xor     r9, r9
+        xor     r11, r11
         pop     rdi
         mov     rsi, rsp
 
@@ -196,21 +196,21 @@ _start:
         ret
 
 ?_017:
-        add     r9, 1
-?_018:  add     r9, 3
-?_019:  add     r9, 3
-?_020:  add     r9, 4
-?_021:  add     r9, 1
-?_022:  add     r9, 6
-?_023:  add     r9, 2
-?_024:  add     r9, 38
-?_025:  add     r9, 1
-?_026:  add     r9, 1
-?_027:  add     r9, 1
+        add     r11, 1
+?_018:  add     r11, 3
+?_019:  add     r11, 3
+?_020:  add     r11, 4
+?_021:  add     r11, 1
+?_022:  add     r11, 6
+?_023:  add     r11, 2
+?_024:  add     r11, 38
+?_025:  add     r11, 1
+?_026:  add     r11, 1
+?_027:  add     r11, 1
 ?_028:  mov     r10, rcx
-        mov     rax, r9
-        xor     r9, r9
+        mov     rax, r11
         syscall
+        xor     r11, r11
         ret
 
 ?_029:

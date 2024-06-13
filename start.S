@@ -8,7 +8,7 @@
 #define c(x, n) \
 .global x; \
 x:; \
-  add r9,n
+  add r11,n
 
 c(wait4, 1)      /* 61 */
 c(exit, 3)       /* 60 */
@@ -24,15 +24,15 @@ c(write, 1)      /* 01 */
 .global read     /* 00 */
 read:
   mov r10,rcx
-  mov rax,r9
-  xor r9,r9
+  mov rax,r11
   syscall
+  xor r11,r11
   ret
 
 .global _start
 _start:
   xor rbp,rbp
-  xor r9,r9
+  xor r11,r11
   pop rdi     /* argc */
   mov rsi,rsp /* argv */
   call main
